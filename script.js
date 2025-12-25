@@ -68,7 +68,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         // Only set new time if not resuming
-        if (!totalSeconds || totalSeconds <= 0) {
+        if (!totalSeconds || totalSeconds <= 0 || startBtn.classList.contains("btn-start")) {
             const minutes = parseInt(minutesInput.value) || 0;
             const seconds = parseInt(secondsInput.value) || 0;
             totalSeconds = minutes * 60 + seconds;
